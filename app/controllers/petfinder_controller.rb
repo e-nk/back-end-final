@@ -50,7 +50,7 @@ class PetController < AppController
     # @method: Delete TO-DO based on :id
     delete '/pets/destroy/:id' do
         begin
-            pet = Pet.find(self.todo_id)
+            pet = Pet.find(self.pet_id)
             pet.destroy
             json_response(data: { message: "pet deleted successfully" })
         rescue => e
